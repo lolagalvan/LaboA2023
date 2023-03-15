@@ -1,3 +1,4 @@
+
 public class Circulo {
 
         private int radio;
@@ -9,12 +10,24 @@ public class Circulo {
 
         }
         public int getRadio(){
-               return radio;
+                return radio;
         }
 
         public void setRadio(int radio) {
                 this.radio = radio;
         }
+        public double area(int radio){
+                double area= Math.PI*radio*radio;
+                return area;
+        }
 
-        public int Cuenta
+        public double area2(int radio){
+                double a= 2*Math.PI*radio;
+                return a;
+        }
+
+
+
+
+
 }
