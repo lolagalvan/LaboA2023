@@ -7,11 +7,6 @@ public class Coche {
     private int velocidad;
 
 
-    public Coche(String ma, String mo, String co) {
-        marca = ma;
-        modelo = mo;
-        color = co;
-    }
 
     public void Coche(String marca, String modelo, String color) {
         this.marca = marca;
@@ -47,11 +42,11 @@ public class Coche {
     public void setVelocidad(int velocidad) {
         this.velocidad = velocidad;
     }
-    public void acelerar(int velocidad){
+    public void acelerar(){
         setVelocidad(this.velocidad + 1);
 
     }
-    public void frenar(int velocidad){
+    public void frenar(){
         setVelocidad(this.velocidad - 1);
 
     }
