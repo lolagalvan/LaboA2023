@@ -4,7 +4,7 @@ public class Persona {
     private String direccion;
 
 
-    public void Persona(String nombre, int edad, String direccion) {
+    public  Persona(String nombre, int edad, String direccion) {
         this.nombre = nombre;
         this.edad = edad;
         this.direccion = direccion;
@@ -34,7 +34,12 @@ public class Persona {
         this.direccion = direccion;
     }
 
-    public void imprimir() {
-        System.out.println("el nombre de la persona es: "+ nombre+ "la edad es: "+ edad + "la direccion es : "+ direccion);;
+    public String imprimir() {
+        String nombre = "nombre" + this.nombre;
+
+        String edad = "edad" + this.edad;
+        String direccion = "direccion" + this.direccion;
+        String datos= nombre + " " + edad + " " + direccion;
+        return datos;
     }
 }
