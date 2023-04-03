@@ -8,6 +8,7 @@ public class Libro {
 
     public Libro() {
         titulo = "Sombra y hueso";
+        autor = new Persona();
         isbn = 123456789;
         cantPaginas = 1050;
         editorial = "Planeta";
@@ -16,7 +17,8 @@ public class Libro {
 
     public Libro(String titulo, int cantPaginas) {
         this.titulo = titulo;
-
+        autor = new Persona();
+        isbn = 24567413;
         this.cantPaginas = cantPaginas;
 
     }
@@ -80,4 +82,3 @@ public class Libro {
         this.fechaPublicacion.menorQue(libro1.getFechaPublicacion());
     }
 }
-

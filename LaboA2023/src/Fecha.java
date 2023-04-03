@@ -1,4 +1,3 @@
-
 public class Fecha {
     private int dia;
     private int mes;
@@ -95,9 +94,6 @@ public class Fecha {
         else System.out.println(" es mayor");
     }
 }
-
-
-
 
 
 
