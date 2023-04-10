@@ -11,7 +11,7 @@ public class Cancion {
 
     public Cancion() {
         this.titulo = " ";
-        autor = new Persona();
+
     }
 
     public String getTitulo() {

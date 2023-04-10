@@ -1,3 +1,5 @@
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -40,7 +42,7 @@ public class Main {
             if (palabras.charAt(0)=='l'|| palabras.charAt(0)=='a'){
                 System.out.println(palabras);
             }
-        }*/
+        }
 
 
         ArrayList<Persona> persona = new ArrayList<Persona>();
@@ -62,8 +64,23 @@ public class Main {
                 System.out.println(personas.imprimir());
             }
 
-        }
+        }*/
+
+        Empleado E1 = new Empleado("Anna");
+        Operario O1 = new Operario("Lola");
+        Directivo D1 = new Directivo("Juli");
+        Tecnico T1 = new Tecnico("cami");
+        Oficial OF1 = new Oficial("Cati");
+        System.out.println(E1);
+        System.out.println(O1);
+        System.out.println(D1);
+        System.out.println(T1);
+        System.out.println(OF1);
     }
+
+
+
+
 }
 
 
