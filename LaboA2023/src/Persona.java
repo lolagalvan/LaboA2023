@@ -10,6 +10,10 @@ public class Persona {
         this.direccion = direccion;
     }
 
+    public Persona(String nombre) {
+        this.nombre = nombre;
+    }
+
     public String getNombre() {
         return nombre;
     }

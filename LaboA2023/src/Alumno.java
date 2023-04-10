@@ -1,12 +1,16 @@
 import java.util.ArrayList;
 
-public class Alumno {
-    private String nombre;
+public class Alumno extends Persona {
+
     private String apellido;
     private Fecha nacimiento;
     private ArrayList<Materia> materias;
 
-    public String getNombre() {
+    public Alumno(String nombre) {
+        super(nombre);
+    }
+
+    /*public String getNombre() {
         return nombre;
     }
 
@@ -36,7 +40,7 @@ public class Alumno {
 
     public void setMaterias(ArrayList<Materia> materias) {
         this.materias = materias;
-    }
+    }*/
 
 
     public void agrgearMatreia(Materia materia){

@@ -1,6 +1,6 @@
-public class Jugador {
+public class Jugador extends Persona{
 
-    private String nombre;
+
     private Fecha nacimiento;
     private int numCamiseta;
 
@@ -8,21 +8,14 @@ public class Jugador {
 
 
 
-
-    public Jugador(){
-        nombre="pepe";
-        numCamiseta=1;
-        capitan=false;
-        nacimiento = new Fecha();
-    }
     public Jugador(String nombre, int numCamiseta, Fecha nacimiento,boolean capitan){
-        this.nombre=nombre;
+        super(nombre);
         this.numCamiseta=numCamiseta;
         capitan=false;
         this.nacimiento= nacimiento;
     }
 
-    public String getNombre() {
+   /* public String getNombre() {
         return nombre;
     }
 
@@ -52,6 +45,6 @@ public class Jugador {
 
     public void setCapitan(boolean capitan) {
         this.capitan = capitan;
-    }
+    }*/
 }
 
