@@ -3,6 +3,8 @@ public class Camionetas extends Vehiculos{
 private String patente;
 private int capacidad;
 
+private int cargaActual;
+
 
     public Camionetas(String marca, String modelo, String color, int ruedas,
                       int año, String patente, int capacidad) {
@@ -28,7 +30,28 @@ private int capacidad;
         this.capacidad = capacidad;
     }
 
+    public int getCargaActual() {
+        return cargaActual;
+    }
+
+    public void setCargaActual(int cargaActual) {
+        this.cargaActual = cargaActual;
+    }
+
     public void MostrarCapacidad(){
         System.out.println(capacidad + "KG");
+    }
+
+    public void aniadirCarga(int aniadir){
+
+        if(aniadir>0) {
+            cargaActual = cargaActual + aniadir;
+            if (cargaActual > capacidad) {
+                cargaActual= capacidad;
+                System.out.println("es mucha carga)");
+            } else {
+                System.out.println("se añadio la carga");
+            }
+        }
     }
 }

@@ -17,10 +17,34 @@ public class Empresa {
         int canCamionetas = 0;
 
         for (Vehiculos vehiculo:vehiculos) {
-            if(getClass().getCanonicalName()){
+            if(vehiculo.getClass().getCanonicalName().equals("Coche")){
+                cantAutos ++;
+            }
+            else if (vehiculo.getClass().getCanonicalName().equals("Camionetas")) {
+                canCamionetas ++;
 
+            }
+            if (cantAutos>canCamionetas){
+                System.out.println("hay mas autos");
+            }
+            else {
+                System.out.println("hay mas camionetas");
             }
 
         }
     }
-}
+
+    public double porcentajeAutos() {
+        int cantDescapotable = 0;
+        int cantTotal = 0;
+        for (Vehiculos vehiculo : vehiculos) {
+            if (vehiculo instanceof Coche) {
+                cantTotal++;
+                if (((Coche) vehiculo).isDescapotable()) {
+                    cantDescapotable++;
+                }
+            }
+        }
+        int porcentaje = (cantDescapotable * 100) / cantTotal;
+        return porcentaje;
+    }

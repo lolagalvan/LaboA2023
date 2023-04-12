@@ -46,7 +46,11 @@ public class Coche extends Vehiculos{
     }
 
     public void esDescapotable(){
+        int Cantdescapotables = 0;
+        int CantNodescapotables = 0;
+
         if (descapotable){
+            Cantdescapotables ++;
             System.out.println("es descapotable");
         }
         else {
