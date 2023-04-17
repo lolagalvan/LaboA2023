@@ -6,6 +6,8 @@ public class Alumno extends Persona {
     private Fecha nacimiento;
     private ArrayList<Materia> materias;
 
+    private String division;
+
     public Alumno(String nombre) {
         super(nombre);
     }

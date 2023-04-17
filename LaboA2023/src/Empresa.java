@@ -34,7 +34,7 @@ public class Empresa {
         }
     }
 
-    public double porcentajeAutos() {
+    public void porcentajeAutos() {
         int cantDescapotable = 0;
         int cantTotal = 0;
         for (Vehiculos vehiculo : vehiculos) {
@@ -46,5 +46,4 @@ public class Empresa {
             }
         }
         int porcentaje = (cantDescapotable * 100) / cantTotal;
-        return porcentaje;
     }
