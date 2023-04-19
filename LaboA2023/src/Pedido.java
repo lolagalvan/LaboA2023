@@ -2,7 +2,7 @@ import java.sql.Time;
 
 public class Pedido {
 
-    private int idPedido;
+
     private Fecha fechaCreacion;
 
     private Plato plato;
@@ -11,12 +11,12 @@ public class Pedido {
 
     private boolean entregado;
 
-    public int getIdPedido() {
-        return idPedido;
-    }
-
-    public void setIdPedido(int idPedido) {
-        this.idPedido = idPedido;
+    public Pedido(Fecha fechaCreacion, Plato plato,Persona personaPedido, Tiempo horaEntrega, boolean entregado) {
+        this.fechaCreacion = fechaCreacion;
+        this.plato = plato;
+        this.personaPedido = personaPedido;
+        this.horaEntrega = horaEntrega;
+        this.entregado = entregado;
     }
 
     public Fecha getFechaCreacion() {
@@ -57,6 +57,15 @@ public class Pedido {
 
     public void setEntregado(boolean entregado) {
         this.entregado = entregado;
+    }
+
+    public double calcularPrecio(){
+        double porDescuento = ((Profesor) personaPedido).getDescuento();
+        int precio = plato.getPrecio();
+        double precioFinal;
+        precioFinal = precio - ((precio * porDescuento)/100);
+        return precioFinal;
+
     }
 
 }
