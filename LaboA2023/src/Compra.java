@@ -5,12 +5,16 @@ public class Compra {
 private Cliente cliente;
 private MetodoPago pago;
 
+private int precioFinal;
 
-    public Compra(Cliente cliente, MetodoPago pago, ArrayList<Componentes> componentes) {
+
+
+    public Compra(Cliente cliente, MetodoPago pago, ArrayList<Componentes> componentes,int precioFinal) {
         if(verificarComponentes(componentes)&& verificarStock(componentes)) {
             this.cliente = cliente;
             this.pago = pago;
             this.componentes = componentes;
+            this.precioFinal = precioFinal;
         }
     }
 
@@ -73,6 +77,17 @@ private MetodoPago pago;
         return compra;
 
     }
+
+    public double calcularPrecio (MetodoPago metodopago , ArrayList<Componentes>componentes ){
+        int Pfinal = 0;
+        for (Componentes componente:componentes) {
+            Pfinal = precioFinal + componente.getPrecio();
+            if (metodopago instanceof Tarjeta){
+                Pfinal = Pfinal*100/5;
+            }
+        }
+        return Pfinal;
+    }
     public void cantEntrada(){
         int cantEntrada= 0;
         for (Componentes componente: componentes) {
@@ -91,6 +106,8 @@ private MetodoPago pago;
             System.out.println("los componentes de salida son "+ cantSalida) ;
         }
     }
+
+
 
 
 }

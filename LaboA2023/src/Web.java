@@ -25,7 +25,16 @@ public class Web {
         this.componentes = componentes;
     }
 
-    public void hacerCompra(ArrayList<Componentes> componentes, Cliente cliente, MetodoPago metodopago){
-        
+    public void agregarComponente (){componentes.add(new Componentes());};
+    public void sacarComponentes(){componentes.remove(0);};
+
+    public void hacerCompra(ArrayList<Componentes> componentes, Cliente cliente, MetodoPago metodopago,int preciofinal){
+        Compra compra = new Compra(componentes,cliente,metodopago,preciofinal);
+        for (Componentes componente:componentes) {
+            componente.setStock(componente.getStock()-1);
+        }
+        computadorasVendidas.add(compra);
     }
+
+
 }
