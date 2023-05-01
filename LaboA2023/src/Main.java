@@ -1,88 +1,17 @@
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
-
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.Scanner;
-
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+        // Press Alt+Intro with your caret at the highlighted text to see how
+        // IntelliJ IDEA suggests fixing it.
+        System.out.printf("Hello and welcome!");
 
-            /* ArrayList<Integer> numeros = new ArrayList<Integer>();
-        Scanner entrada = new Scanner(System.in);
-        int cantidad;
-        cantidad = entrada.nextInt();
+        // Press Mayús+F10 or click the green arrow button in the gutter to run the code.
+        for (int i = 1; i <= 5; i++) {
 
-        for (int i=0; i<cantidad;i++){
-            int num;
-            num = entrada.nextInt();
-            numeros.add(num);
+            // Press Mayús+F9 to start debugging your code. We have set one breakpoint
+            // for you, but you can always add more by pressing Ctrl+F8.
+            System.out.println("i = " + i);
         }
-        int suma = 0;
-        for (int numero: numeros) {
-            suma = numero + suma;
-
-
-        }
-        System.out.println("la suma es: "+ suma); */
-
-       /*ArrayList<String> palabra = new ArrayList<String>();
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("cantidad: ");
-        int cantidad;
-        cantidad = entrada.nextInt();
-        System.out.println("palabras: ");
-        for (int i=0; i<cantidad;i++){
-
-            String pal;
-            pal = entrada.next();
-            palabra.add(pal);
-        }
-
-        for (String palabras: palabra) {
-            if (palabras.charAt(0)=='l'|| palabras.charAt(0)=='a'){
-                System.out.println(palabras);
-            }
-        }
-
-
-        ArrayList<Persona> persona = new ArrayList<Persona>();
-        Scanner entrada = new Scanner(System.in);
-        System.out.println("cantidad: ");
-        int cantidad;
-        cantidad = entrada.nextInt();
-
-
-        for (int i = 0; i < cantidad; i++) {
-            String nombre = entrada.next();
-            int edad = entrada.nextInt();
-            String direccion = entrada.next();
-            Persona persona1 = new Persona(nombre, edad, direccion);
-
-        }
-        for (Persona personas : persona) {
-            if (personas.getEdad() > 30) {
-                System.out.println(personas.imprimir());
-            }
-
-        }*/
-
-        /*Empleado E1 = new Empleado("Anna");
-        Operario O1 = new Operario("Lola");
-        Directivo D1 = new Directivo("Juli");
-        Tecnico T1 = new Tecnico("Cami");
-        Oficial OF1 = new Oficial("Cati");
-        System.out.println(E1);
-        System.out.println(O1);
-        System.out.println(D1);
-        System.out.println(T1);
-        System.out.println(OF1);*/
-
-        Menu m1 = new Menu();
     }
-
-
-
-
 }
-
-
