@@ -1,57 +1,50 @@
 package Personas;
 
+import Tiempo.DiasHabiles;
+import Tiempo.Fecha;
+
+import java.time.LocalDateTime;
+import java.util.HashSet;
+
 public class Empleado extends Persona {
-    private String apellido;
-    private int DNI;
 
-    private String Pais;
+    private HashSet<DiasHabiles>diasHabiles;
+    private HashSet<LocalDateTime> registro;
 
-    private int Telefono;
-
-
-
-    public Empleado(String nombre) {
-        super(nombre);
-        this.apellido=apellido;
-        this.DNI=DNI;
-        this.Telefono=Telefono;
+    public Empleado(String nombre, int edad, String direccion, String apellido, int telefono,
+                    Fecha nacimiento, HashSet<DiasHabiles>diasHabiles, HashSet<LocalDateTime>registro ) {
+        super(nombre, edad, direccion,apellido,telefono,nacimiento);
+        this.diasHabiles=diasHabiles;
+        this.registro=registro;
     }
 
-    public String getApellido() {
-        return apellido;
+    public HashSet<DiasHabiles> getDiasHabiles() {
+        return diasHabiles;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setDiasHabiles(HashSet<DiasHabiles> diasHabiles) {
+        this.diasHabiles = diasHabiles;
     }
 
-    public int getDNI() {
-        return DNI;
+    public HashSet<LocalDateTime> getRegistro() {
+        return registro;
     }
 
-    public void setDNI(int DNI) {
-        this.DNI = DNI;
+    public void setRegistro(HashSet<LocalDateTime> registro) {
+        this.registro = registro;
     }
 
-    public String getPais() {
-        return Pais;
-    }
+     public double asistencia(int mes){
+        int diasQueFue = 0;
+        double asistencia = 0;
+         for (LocalDateTime dias:registro) {
+             if (dias.getMonthValue()==mes){
+                 diasQueFue ++;
+             }
+         }
+         asistencia=(diasQueFue*100)/(diasHabiles.size()*4);
+         return asistencia;
+     }
 
-    public void setPais(String pais) {
-        Pais = pais;
-    }
 
-    public int getTelefono() {
-        return Telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        Telefono = telefono;
-    }
-
-    @Override
-    public String toString() {
-        return "Personas.Empleado" + ' ' + getNombre() + "->" +
-                getClass().getCanonicalName();
-    }
 }
