@@ -5,9 +5,10 @@ import Tiempo.Tiempo;
 import Tiempo.Fecha;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Llamada {
-    private ArrayList<Empleado>empleados;
+    private HashSet<Empleado> empleados;
 
     private String empleadoOrigen;
     private String EmpleadoDestino;
@@ -15,7 +16,7 @@ public class Llamada {
     private Tiempo duracion;
 
 
-    public Llamada(ArrayList<Empleado>empleados,String empleadoOrigen,String empleadoDestino,Fecha fechaLlamada,Tiempo duracion) {
+    public Llamada(HashSet<Empleado>empleados,String empleadoOrigen,String empleadoDestino,Fecha fechaLlamada,Tiempo duracion) {
         this.empleados=empleados;
         this.empleadoOrigen=empleadoOrigen;
         this.EmpleadoDestino=empleadoDestino;
@@ -23,11 +24,11 @@ public class Llamada {
         this.duracion=duracion;
     }
 
-    public ArrayList<Empleado> getEmpleados() {
+    public HashSet<Empleado> getEmpleados() {
         return empleados;
     }
 
-    public void setEmpleados(ArrayList<Empleado> empleados) {
+    public void setEmpleados(HashSet<Empleado> empleados) {
         this.empleados = empleados;
     }
 
