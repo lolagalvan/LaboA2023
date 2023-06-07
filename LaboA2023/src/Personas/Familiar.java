@@ -16,6 +16,11 @@ public class Familiar extends Persona {
         this.platos = platos;
     }
 
+    public Familiar(){
+        super("anna", 17, "ceretti 2685", "Mlikota", 115930898,new Fecha());
+        platos= new ArrayList<>();
+
+    }
     public ArrayList<Plato> getPlatos() {
         return platos;
     }
@@ -29,6 +34,6 @@ public class Familiar extends Persona {
         for (Plato calorias:platos) {
             cantTotal += calorias.getCantCalorias();
         }
-        return cantTotal/ platos.size();
+        return cantTotal;
     }
 }

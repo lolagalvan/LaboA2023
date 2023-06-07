@@ -25,27 +25,32 @@ public class Familia {
         }
         return cantTotal/ familiares.size();
     }
-    public int masCalorias (){
+    public Familiar masCalorias (){
         int mayor = 0;
+        Familiar gordito = new Familiar();
 
         for (Familiar integrante:familiares) {
             if (integrante.caloriastotales()>mayor){
                 mayor = integrante.caloriastotales();
+                gordito = integrante;
 
             }
         }
-        return mayor;
+        return gordito;
     }
 
-    public int menosCalorias (){
+    public Familiar menosCalorias (){
         int menos = 0;
+        Familiar flaco = new Familiar();
+
 
         for (Familiar integrante:familiares) {
-            if (integrante.caloriastotales()<menos){
+            if (integrante.caloriastotales()<menos||menos ==0){
                 menos = integrante.caloriastotales();
+                flaco = integrante;
 
             }
         }
-        return menos;
+        return flaco;
     }
 }
