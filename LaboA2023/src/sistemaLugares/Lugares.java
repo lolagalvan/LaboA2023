@@ -1,4 +1,6 @@
-package lugares;
+package sistemaLugares;
+
+import lugares.Coordenadas;
 
 import java.util.HashSet;
 
@@ -11,6 +13,12 @@ public class Lugares {
         this.nombre = nombre;
         this.codigo = codigo;
         this.listaCoordenadas = listaCoordenadas;
+    }
+
+    public Lugares() {
+        nombre="Argentina";
+        codigo=2106;
+        listaCoordenadas=new HashSet<>();
     }
 
     public String getNombre() {
@@ -35,5 +43,9 @@ public class Lugares {
 
     public void setListaCoordenadas(HashSet<Coordenadas> listaCoordenadas) {
         this.listaCoordenadas = listaCoordenadas;
+    }
+
+    public int consultarPoblacion(){
+        return 0;
     }
 }
