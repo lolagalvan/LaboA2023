@@ -19,4 +19,9 @@ public class Barrio extends Lugares {
     public void setPoblacion(int poblacion) {
         this.poblacion = poblacion;
     }
+
+    @Override
+    public int consultarPoblacion() {
+        return 0;
+    }
 }

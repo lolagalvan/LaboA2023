@@ -2,7 +2,7 @@ package componentes;
 
 import componentes.Componentes;
 
-public class Periferico extends Componentes {
+public abstract class Periferico extends Componentes {
     private  String puertosValidos;
 
     public Periferico(String nombreFabricante, String modelo, int precio, int stock, String puertosValidos) {

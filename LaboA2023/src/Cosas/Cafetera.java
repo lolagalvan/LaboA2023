@@ -1,12 +1,12 @@
 package Cosas;
 
 public class Cafetera {
-    private int cantMax;
+    private static int cantMax = 1000;
     private int cantActual;
 
 
     public Cafetera() {
-        this.cantMax = 1000;
+
         this.cantActual = 0;
     }
 

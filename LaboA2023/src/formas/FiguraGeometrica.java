@@ -1,6 +1,6 @@
 package formas;
 
-public class FiguraGeometrica {
+public abstract class FiguraGeometrica {
 
 
 }

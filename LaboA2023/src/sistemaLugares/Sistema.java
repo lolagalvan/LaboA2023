@@ -2,7 +2,7 @@ package sistemaLugares;
 
 import java.util.HashSet;
 
-public class Sistema {
+public abstract class Sistema {
 
     private HashSet<Lugares>lugares;
 

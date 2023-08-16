@@ -1,6 +1,6 @@
 package Vehiculo;
 
-public class Vehiculos {
+public abstract class Vehiculos {
 
     private String marca;
     private String modelo;

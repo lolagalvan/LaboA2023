@@ -2,7 +2,7 @@ package Cosas;
 
 import Personas.Persona;
 import Tiempo.Fecha;
-import Enums.Editorial;
+import lugares.Editorial;
 
 public class Libro {
     private String titulo;

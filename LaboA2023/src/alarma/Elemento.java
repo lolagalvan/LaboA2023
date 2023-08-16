@@ -1,6 +1,6 @@
 package alarma;
 
-public class Elemento {
+public abstract class Elemento {
     private boolean estado;
     private int medida;
     private int umbral;
@@ -49,7 +49,6 @@ public class Elemento {
         }
     }
 
-    public void alarma(){
-    }
+    public  abstract void alarma();
 
 }
