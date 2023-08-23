@@ -1,5 +1,5 @@
 package ABMmascotas;
 
 public enum TipoMascota {
-    PERRO, GATO ,PAJARITO
+    PERRO, GATO ,PAJARITO, PEZ
 }
