@@ -19,6 +19,9 @@ public abstract class Persona {
         this.telefono = telefono;
         this.nacimiento = nacimiento;
     }
+    public Persona(){
+
+    }
 
     public Persona(String nombre) {
         this.nombre = nombre;
