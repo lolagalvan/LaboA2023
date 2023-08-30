@@ -1,3 +1,5 @@
+package EjRepaso1;
+
 import Personas.Persona;
 import Tiempo.Fecha;
 import sistemaLugares.Provincia;
@@ -10,7 +12,7 @@ public class Candidato extends Persona {
     private Partidos partido;
     private HashMap<ProvinciaEleccion, Integer> cantVotos;
     private HashSet<String>listaPropuestas;
-    public Candidato(String nombre, int edad, String direccion, String apellido, int telefono, Fecha nacimiento, Partidos partido,HashMap<ProvinciaEleccion, Integer> cantVotos,HashSet<String>listaPropuestas ) {
+    public Candidato(String nombre, int edad, String direccion, String apellido, int telefono, Fecha nacimiento, Partidos partido, HashMap<ProvinciaEleccion, Integer> cantVotos, HashSet<String>listaPropuestas ) {
         super(nombre, edad, direccion, apellido, telefono, nacimiento);
         this.partido= partido;
         this.cantVotos=cantVotos;

@@ -1,3 +1,7 @@
+package EjRepaso1;
+
+import EjRepaso1.Candidato;
+
 public enum Partidos {
  ELPOLIAVANZA("El Poli Avanza",new Candidato()),JUNTOSPORELPOLI("Juntos Por El Poli",new Candidato()),UNIONPORLADOCENCIA("Union Por La Docencia", new Candidato()),ELFRENTEDECONSTITUYENTES("El Frente De Constituyentes",new Candidato())
     ;

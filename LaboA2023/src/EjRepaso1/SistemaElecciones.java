@@ -1,5 +1,8 @@
+package EjRepaso1;
+
+import EjRepaso1.Partidos;
+
 import java.util.HashSet;
-import java.util.Map;
 
 public class SistemaElecciones {
     private HashSet<Votante>votantes;
