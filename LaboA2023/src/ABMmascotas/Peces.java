@@ -1,41 +1,48 @@
-package ABMmascotas;
+package ABMMascotas;
 
-public class Peces extends Mascota{
-    private static int vidasIniciales=10;
-    private int vidasActuales;
+public class Peces extends Mascota {
+    private int vidas;
+    private static int vidasInicales = 10;
 
     public Peces() {
-        this.vidasActuales = vidasIniciales;
+        this.vidas = vidasInicales;
     }
 
-    public static int getVidasIniciales() {
-        return vidasIniciales;
+
+    public int getVidas() {
+        return vidas;
     }
 
-    public static void setVidasIniciales(int vidasIniciales) {
-        Peces.vidasIniciales = vidasIniciales;
+    public void setVidas(int vidas) {
+        this.vidas = vidas;
     }
 
-    public int getVidasActuales() {
-        return vidasActuales;
+    public static int getVidasInicales() {
+        return vidasInicales;
     }
 
-    public void setVidasActuales(int vidasActuales) {
-        this.vidasActuales = vidasActuales;
+    public static void setVidasInicales(int vidasInicales) {
+        Peces.vidasInicales = vidasInicales;
     }
-
     @Override
-    void saludar(boolean esDuenio) {
-        if(esDuenio){
-            vidasActuales--;
-        }else{
-            vidasActuales = 0;
+    public void saludar(boolean esDuenio) {
+        if (esDuenio) {
+            vidas--;
+
+        } else {
+            vidas = 0;
+
         }
     }
 
     @Override
-    void alimentar() {
-        vidasActuales++;
+    public void alimentar() {
+        vidas++;
+    }
+
+    @Override
+    public TipoMascota devolverTipo() {
+        return TipoMascota.PEZ;
     }
 
 
