@@ -1,17 +1,19 @@
-package ABMmascotas;
+package ABMMascotas;
 
-import ABMmascotas.Mascota;
+import ABMMascotas.Mascota;
 
 public class Pajarito extends Mascota {
     private boolean cantor;
-    private String tipoPajarito;
-    private int alegriaPajarito;
+    private String canto;
+    private int alegria;
 
-    public Pajarito(boolean cantor, String tipoPajarito,int alegriaPajarito) {
+
+    public Pajarito(boolean cantor, String canto, int alegria) {
         super();
         this.cantor = cantor;
-        this.tipoPajarito = tipoPajarito;
-        this.alegriaPajarito = alegriaPajarito;
+        this.canto = canto;
+        alegria = this.alegria;
+
     }
 
     public boolean isCantor() {
@@ -22,55 +24,36 @@ public class Pajarito extends Mascota {
         this.cantor = cantor;
     }
 
-    public String getTipoPajarito() {
-        return tipoPajarito;
+    public String getCanto() {
+        return canto;
     }
 
-    public void setTipoPajarito(String tipoPajarito) {
-        this.tipoPajarito = tipoPajarito;
+    public void setCanto(String canto) {
+        this.canto = canto;
     }
 
-    public int getAlegriaPajarito() {
-        return alegriaPajarito;
-    }
-
-    public void setAlegriaPajarito(int alegriaPajarito) {
-        this.alegriaPajarito = alegriaPajarito;
-    }
-
-    public String canto(String tipoCanto){
-        if(cantor == true){
-            tipoPajarito = tipoCanto;
-
-        }
-        return tipoPajarito;
-    }
 
     @Override
-    void saludar(boolean esDuenio) {
-        if(alegriaPajarito >= 1) {
-            alegriaPajarito = -1;
-            for (int i = 0; i == alegriaPajarito; i++) {
-                if (esDuenio == true) {
+    public void alimentar() {
+        alegria ++;
 
-                    if (cantor == false) {
-                        System.out.println("pio");
-                    } else {
-                        System.out.println("canto diferente");
-                    }
-
-
+    }
+    @Override
+    public void saludar(boolean esDuenio) {
+        for (int i = alegria; i <= alegria ; i++) {
+            if (esDuenio) {
+                if (cantor == false) {
+                    System.out.println("pio");
+                } else {
+                    System.out.println(canto);
                 }
             }
         }
+
     }
 
     @Override
-    void alimentar() {
-        alegriaPajarito +=1;
-
-
+    public TipoMascota devolverTipo() {
+        return TipoMascota.PAJARITO;
     }
-
-
 }
