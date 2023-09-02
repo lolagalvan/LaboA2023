@@ -1,36 +1,26 @@
-package ABMmascotas;
+package ABMMascotas;
 
-import ABMmascotas.Duenio;
+import ABMMascotas.Duenio;
 
 public abstract class Mascota {
-
-    private String nombre;
+    private String nombreMascota;
     private Duenio duenio;
     private TipoMascota tipo;
 
-
-
-    public Mascota(String nombre,Duenio duenio, TipoMascota tipo) {
-        this.nombre = nombre;
+    public Mascota(String nombreMascota, Duenio duenio) {
+        this.nombreMascota = nombreMascota;
         this.duenio = duenio;
-        this.tipo = tipo;
-
-
     }
 
     public Mascota() {
-        nombre = "Milo";
-        duenio = new Duenio("Anna");
-        tipo = TipoMascota.PERRO;
-
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreMascota() {
+        return nombreMascota;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreMascota(String nombreMascota) {
+        this.nombreMascota = nombreMascota;
     }
 
     public Duenio getDuenio() {
@@ -40,23 +30,7 @@ public abstract class Mascota {
     public void setDuenio(Duenio duenio) {
         this.duenio = duenio;
     }
-
-    public TipoMascota getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(TipoMascota tipo) {
-        this.tipo = tipo;
-    }
-
-
-
-    abstract void saludar(boolean esDuenio);
-
-
-    abstract void alimentar();
-    public void imprimirTipo(){
-        System.out.println(tipo);
-    }
-
+    public abstract void saludar(boolean esDuenio);
+    public abstract void alimentar();
+    public abstract TipoMascota devolverTipo();
 }
