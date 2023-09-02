@@ -1,56 +1,101 @@
-package Personas;
-
 import Personas.Jugador;
+import Tiempo.Turnos;
 
 import java.util.ArrayList;
 
-public class Equipos {
-
+public class Equipo {
+    private String nombreEquipo;
+    private String barrioProcedencia;
     private ArrayList<Jugador> jugadores;
-    private String disponibilidadH;
-    private String nombre;
-    private String barrio;
+    private int numCapitan;
+    private ArrayList<Boolean> diaDisponible;
+    private Turnos horaDisponible;
+    private static int cantJugadores=10;
 
-
-    public Equipos (String nombre, ArrayList<Jugador> jugadores, String disponibilidadH,String barrio){
-        this.nombre=nombre;
-        this.jugadores=jugadores;
-        this.disponibilidadH= disponibilidadH;
-        this.barrio=barrio;
+    public Equipo(){
+        nombreEquipo="Staylor";
+        barrioProcedencia="Villa Pueyrredon";
+        jugadores=new ArrayList<Jugador>(cantJugadores);
+        numCapitan=1;
+        horaDisponible= Turnos.MANIANA;
+        diaDisponible=new ArrayList<Boolean>(6);
     }
 
-    public ArrayList<Jugador> getJugadores() {
+    public Equipo(String nombreEquipo, String barrioProcedencia, ArrayList<Jugador> integrantes, int numCapitan, Turnos horaDisponible, ArrayList<Boolean> diaDisponible) {
+        this.nombreEquipo = nombreEquipo;
+        this.barrioProcedencia = barrioProcedencia;
+        this.jugadores = integrantes;
+        this.numCapitan = numCapitan;
+        this.horaDisponible = horaDisponible;
+        this.diaDisponible = diaDisponible;
+    }
+
+    public String getNombreEquipo() {
+        return nombreEquipo;
+    }
+
+    public void setNombreEquipo(String nombreEquipo) {
+        this.nombreEquipo = nombreEquipo;
+    }
+
+    public String getBarrioProcedencia() {
+        return barrioProcedencia;
+    }
+
+    public void setBarrioProcedencia(String barrioProcedencia) {
+        this.barrioProcedencia = barrioProcedencia;
+    }
+
+    public ArrayList<Jugador> getIntegrantes() {
         return jugadores;
     }
 
-    public void setJugadores(ArrayList<Jugador> jugadores) {
-        this.jugadores = jugadores;
+    public void setIntegrantes(ArrayList<Jugador> integrantes) {
+        this.jugadores = integrantes;
     }
 
-    public String getDisponibilidadH() {
-        return disponibilidadH;
+    public int getNumCapitan() {
+        return numCapitan;
     }
 
-    public void setDisponibilidadH(String disponibilidadH) {
-        this.disponibilidadH = disponibilidadH;
+    public void setNumCapitan(int numCapitan) {
+        this.numCapitan = numCapitan;
     }
 
-    public String getNombre() {
-        return nombre;
+    public ArrayList<Boolean> getDiaDisponible() {
+        return diaDisponible;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setDiaDisponible(ArrayList<Boolean> diaDisponible) {
+        this.diaDisponible = diaDisponible;
     }
 
-    public String getBarrio() {
-        return barrio;
+    public Turnos getHoraDisponible() {
+        return horaDisponible;
     }
 
-    public void setBarrio(String barrio) {
-        this.barrio = barrio;
+    public void setHoraDisponible(Turnos horaDisponible) {
+        this.horaDisponible = horaDisponible;
     }
 
-
-
+    public Boolean validacionNumeroJugador(Jugador nuevoJugador){
+        boolean puedeEntrar=true;
+        for(Jugador jugador : jugadores){
+            if(jugador.getNumero()==nuevoJugador.getNumero()){
+                puedeEntrar=false;
+            }
+        }
+        return puedeEntrar;
+    }
+    public void agregarJugador(Jugador nuevoJugador){
+        boolean validar= validacionNumeroJugador(nuevoJugador);
+        if (validar) {
+            jugadores.add(nuevoJugador);
+            if(nuevoJugador.getNumero()==numCapitan){
+                nuevoJugador.setCapitan(true);
+            }
+        } else {
+            System.out.println("Ya hay un jugador con este numero");
+        }
+    }
 }
