@@ -1,21 +1,7 @@
-package ABMmascotas;
+import Personas.Persona;
 
-public class Duenio {
-
-    private String nombre;
-
-    public Duenio(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public Duenio() {
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+public class Duenio extends Persona {
+    public Duenio(String nombre, int edad, String direccion, String apellido, int telefono, String pais) {
+        super(nombre, edad, direccion, apellido, telefono, pais);
     }
 }
