@@ -1,34 +1,34 @@
-package Deportes;
+package Curling;
 
-import Enums.Semana;
-import Enums.Turno;
-import Humanos.Jugador;
+import Personas.Jugador;
+import Tiempo.Semana;
+import Tiempo.Turnos;
 
 import java.util.ArrayList;
 
-import static Enums.Semana.LUNES;
-
-public class Partido {
+public class Partidos {
     private Equipo equipo1;
     private Equipo equipo2;
     private Semana dia;
-    private Turno hora;
+    private Turnos hora;
 
-    public Partido(Equipo equipo1, Equipo equipo2, Semana dia, Turno hora) {
+
+    public Partidos(Equipo equipo1, Equipo equipo2, Semana dia, Turnos hora) {
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
         this.dia = dia;
         this.hora = hora;
     }
 
-    public Partido() {
+    public Partidos() {
         equipo1 = new Equipo();
-        equipo2 = new Equipo("Chanchos","Villa Urquiza", new ArrayList<Jugador>(), 2, Turno.MANIANA,new ArrayList<Boolean>() );
+        equipo2 = new Equipo("Jelly","Villa Devoto", new ArrayList<Jugador>(), 3, Turnos.MANIANA,new ArrayList<Boolean>() );
         dia = Semana.LUNES;
-        hora = Turno.MANIANA;
+        hora = Turnos.MANIANA;
     }
 
-    public Partido(Equipo equipo1, Equipo equipo2){
+
+    public Partidos(Equipo equipo1, Equipo equipo2){
         if(equipo1.getHoraDisponible().equals(equipo2.getHoraDisponible())){
             for(int i=0; i<6; i++) {
                 if (equipo1.getDiaDisponible().get(i) ==equipo2.getDiaDisponible().get(i)){
@@ -58,12 +58,12 @@ public class Partido {
                     }
                 }else{ dia = Semana.SABADO; }
             }
-            if(equipo1.getHoraDisponible().equals(Turno.MANIANA)){
-                hora = Turno.MANIANA;
-            } else if (equipo1.getHoraDisponible().equals(Turno.TARDE)) {
-                hora = Turno.TARDE;
-            } else if(equipo1.getHoraDisponible().equals(Turno.NOCHE)) {
-                hora = Turno.NOCHE;
+            if(equipo1.getHoraDisponible().equals(Turnos.MANIANA)){
+                hora = Turnos.MANIANA;
+            } else if (equipo1.getHoraDisponible().equals(Turnos.TARDE)) {
+                hora = Turnos.TARDE;
+            } else if(equipo1.getHoraDisponible().equals(Turnos.NOCHE)) {
+                hora = Turnos.NOCHE;
             }
         }
     }
@@ -92,11 +92,11 @@ public class Partido {
         this.dia = dia;
     }
 
-    public Turno getHora() {
+    public Turnos getHora() {
         return hora;
     }
 
-    public void setHora(Turno hora) {
+    public void setHora(Turnos hora) {
         this.hora = hora;
     }
 }
