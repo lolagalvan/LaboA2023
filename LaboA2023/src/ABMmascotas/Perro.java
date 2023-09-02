@@ -1,42 +1,40 @@
-package ABMmascotas;
+package ABMMascotas;
 
-import ABMmascotas.Mascota;
+import ABMMascotas.Duenio;
+import ABMMascotas.Mascota;
 
 public class Perro extends Mascota {
-        private int alegriaPerro;
 
-    public Perro(int alegriaPerro) {
-        super();
-        this.alegriaPerro = alegriaPerro;
+    private int alegria;
+
+    public Perro(String nombreMascota, Duenio duenio, int alegria) {
+        super(nombreMascota, duenio);
+        alegria = this.alegria;
     }
 
-    public int getAlegriaPerro() {
-        return alegriaPerro;
-    }
 
-    public void setAlegriaPerro(int alegriaPerro) {
-        this.alegriaPerro = alegriaPerro;
-    }
 
     @Override
-    void saludar(boolean esDuenio) {
+    public void alimentar() {
+        alegria ++;
 
+    }
+    @Override
+    public void saludar(boolean esDuenio) {
+        for (int i = alegria; i <= alegria ; i++) {
+            if (esDuenio) {
+                System.out.println("guau");
 
-       if(alegriaPerro >= 1){
-           alegriaPerro =-1;
-            for (int i = 0; i == alegriaPerro; i++) {
-                if(esDuenio){ System.out.println("guau");
-                }else {
-                    System.out.println("¡GUAU!");
-                }
-
+            } else {
+                System.out.println("GUAU!");
             }
-       }
+        }
     }
 
     @Override
-    void alimentar() {
-        alegriaPerro +=1;
-
+    public TipoMascota devolverTipo() {
+        return TipoMascota.PERRO;
     }
+
+
 }
