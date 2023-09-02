@@ -1,40 +1,38 @@
-package ABMmascotas;
+package ABMMascotas;
 
 public class Gato extends Mascota {
-    private int alegriaGato;
-    public Gato(int alegriaGato) {
-        super();
-        this.alegriaGato = alegriaGato;
 
+    private int alegria;
+
+    public Gato( int alegria) {
+
+        this.alegria = alegria;
     }
 
-    public int getAlegriaGato() {
-        return alegriaGato;
-    }
 
-    public void setAlegriaGato(int alegriaGato) {
-        this.alegriaGato = alegriaGato;
-    }
 
     @Override
-    void saludar(boolean esDuenio) {
+    public void alimentar() {
+        alegria ++;
 
-        if(alegriaGato >= 1){
-            alegriaGato =-1;
-            for (int i = 0; i == alegriaGato; i++) {
-                if(esDuenio) {
-                    System.out.println("miau");
-                }else{
-                    System.out.println("¡MIAU!");
-                }
+    }
+    @Override
+    public void saludar(boolean esDuenio) {
 
+        for (int i = alegria; i <= alegria ; i++){
+            if (esDuenio) {
+                System.out.println("miau");
+            } else {
+                System.out.println("MIAU!");
             }
         }
+
     }
+
 
     @Override
-    void alimentar() {
-        alegriaGato += 1;
-
+    public TipoMascota devolverTipo() {
+        return TipoMascota.GATO;
     }
+
 }
