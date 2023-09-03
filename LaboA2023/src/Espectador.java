@@ -3,14 +3,34 @@ import Personas.Persona;
 import java.util.HashSet;
 
 public class Espectador extends Persona {
-    private int idEspectador;
+    private static int contador= 0;
+    private  int idEspectador;
     private String mail;
-    private HashSet<Funcion>funciones;
+    private HashSet<Funcion> funcionesVistas;
 
-    public Espectador(int idEspectador, String mail, HashSet<Funcion> funciones) {
-        this.idEspectador = idEspectador;
+    public Espectador( String mail, HashSet<Funcion> funcionesVistas) {
+        contador++;
+        this.idEspectador = contador;
         this.mail = mail;
-        this.funciones = funciones;
+        this.funcionesVistas = funcionesVistas;
+    }
+
+    public Espectador( String mail) {
+        contador=+1;
+        this.idEspectador = contador;
+        this.mail = mail;
+        funcionesVistas = new HashSet<>();
+    }
+
+    public Espectador() {
+    }
+
+    public static int getContador() {
+        return contador;
+    }
+
+    public static void setContador(int contador) {
+        Espectador.contador = contador;
     }
 
     public int getIdEspectador() {
@@ -29,11 +49,11 @@ public class Espectador extends Persona {
         this.mail = mail;
     }
 
-    public HashSet<Funcion> getFunciones() {
-        return funciones;
+    public HashSet<Funcion> getFuncionesVistas() {
+        return funcionesVistas;
     }
 
-    public void setFunciones(HashSet<Funcion> funciones) {
-        this.funciones = funciones;
+    public void setFuncionesVistas(HashSet<Funcion> funcionesVistas) {
+        this.funcionesVistas = funcionesVistas;
     }
 }
