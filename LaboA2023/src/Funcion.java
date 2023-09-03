@@ -1,17 +1,16 @@
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 public class Funcion {
     private Pelicula pelicula;
-    private LocalDateTime fechaHora;
+    private LocalDateTime fechaYHora;
     private Sala sala;
-    private int cantEspectadores;
+    private int cantCompras ;
 
-    public Funcion(Pelicula pelicula, LocalDateTime fechaHora, Sala sala, int cantEspectadores) {
+    public Funcion(Pelicula pelicula, LocalDateTime fechaYHora, Sala sala, int cantCompras) {
         this.pelicula = pelicula;
-        this.fechaHora = fechaHora;
+        this.fechaYHora = fechaYHora;
         this.sala = sala;
-        this.cantEspectadores = cantEspectadores;
+        this.cantCompras = cantCompras;
     }
 
     public Pelicula getPelicula() {
@@ -22,12 +21,12 @@ public class Funcion {
         this.pelicula = pelicula;
     }
 
-    public LocalDateTime getFechaHora() {
-        return fechaHora;
+    public LocalDateTime getFechaYHora() {
+        return fechaYHora;
     }
 
-    public void setFechaHora(LocalDateTime fechaHora) {
-        this.fechaHora = fechaHora;
+    public void setFechaYHora(LocalDateTime fechaYHora) {
+        this.fechaYHora = fechaYHora;
     }
 
     public Sala getSala() {
@@ -38,11 +37,11 @@ public class Funcion {
         this.sala = sala;
     }
 
-    public int getCantEspectadores() {
-        return cantEspectadores;
+    public int getCantCompras() {
+        return cantCompras;
     }
 
-    public void setCantEspectadores(int cantEspectadores) {
-        this.cantEspectadores = cantEspectadores;
+    public void setCantCompras(int cantCompras) {
+        this.cantCompras = cantCompras;
     }
 }
