@@ -1,14 +1,26 @@
+import java.time.LocalTime;
+
 public class Pelicula {
+    private static int conatorPeli=0;
     private String titulo;
     private int duracion;
     private Genero genero;
-    private int identificador;
+    private int id;
 
-    public Pelicula(String titulo, int duracion, Genero genero, int identificador) {
+    public Pelicula(String titulo, int duracion, Genero genero) {
+        conatorPeli++;
         this.titulo = titulo;
         this.duracion = duracion;
         this.genero = genero;
-        this.identificador = identificador;
+        this.id = conatorPeli;
+    }
+
+    public static int getConatorPeli() {
+        return conatorPeli;
+    }
+
+    public static void setConatorPeli(int conatorPeli) {
+        Pelicula.conatorPeli = conatorPeli;
     }
 
     public String getTitulo() {
@@ -35,11 +47,15 @@ public class Pelicula {
         this.genero = genero;
     }
 
-    public int getIdentificador() {
-        return identificador;
+    public int getId() {
+        return id;
     }
 
-    public void setIdentificador(int identificador) {
-        this.identificador = identificador;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public static int cantPelis(){
+        return conatorPeli;
     }
 }
