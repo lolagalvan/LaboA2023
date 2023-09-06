@@ -1,3 +1,5 @@
+package Cine;
+
 import Personas.Persona;
 
 import java.util.HashSet;
@@ -9,6 +11,7 @@ public class Espectador extends Persona {
     private HashSet<Funcion> funcionesVistas;
 
     public Espectador( String mail, HashSet<Funcion> funcionesVistas) {
+        super();
         contador++;
         this.idEspectador = contador;
         this.mail = mail;
@@ -16,6 +19,7 @@ public class Espectador extends Persona {
     }
 
     public Espectador( String mail) {
+        super();
         contador=+1;
         this.idEspectador = contador;
         this.mail = mail;
@@ -23,6 +27,7 @@ public class Espectador extends Persona {
     }
 
     public Espectador() {
+        super();
     }
 
     public static int getContador() {

@@ -107,16 +107,14 @@ public class Menu {
         edad = entrada.nextInt();
         String direccion;
         direccion = entrada.nextLine();
-        Persona per1 = new Persona(nombreP,edad,direccion);
+
         System.out.println("hora de entrga?");
         int hora = entrada.nextInt();
         int minutos = entrada.nextInt();
         Tiempo t1 = new Tiempo(hora,minutos);
         boolean entrega = false;
 
-        Pedido pedido1 = new Pedido(f1, p1, per1,t1,entrega);
 
-        pedidos.add(pedido1);
         }
 
 
@@ -151,8 +149,6 @@ public class Menu {
                 edad = entrada.nextInt();
                 String direccion;
                 direccion = entrada.nextLine();
-                Persona per1 = new Persona(nombreP,edad,direccion);
-                pedido.setPersonaPedido(per1);
                 System.out.println("hora de entrga?");
                 int hora = entrada.nextInt();
                 int minutos = entrada.nextInt();

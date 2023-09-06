@@ -1,4 +1,4 @@
-package ABMMascotas;
+package ABMmascotas;
 
 public class Peces extends Mascota {
     private int vidas;

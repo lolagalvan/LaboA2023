@@ -1,3 +1,5 @@
+package Cine;
+
 public class Sala {
     private int numero;
     private static int butacas = 45;

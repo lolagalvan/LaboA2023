@@ -1,7 +1,7 @@
-package ABMMascotas;
+package ABMmascotas;
 
-import ABMMascotas.Duenio;
-import ABMMascotas.Mascota;
+import ABMmascotas.Duenio;
+import ABMmascotas.Mascota;
 
 public class Perro extends Mascota {
 

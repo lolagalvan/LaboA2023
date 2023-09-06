@@ -1,3 +1,5 @@
+package Cine;
+
 import java.time.LocalDateTime;
 
 public class Funcion {

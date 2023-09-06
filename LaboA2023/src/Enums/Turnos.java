@@ -1,7 +1,7 @@
 package Enums;
 
-public class Turnos {
-    public enum Turno {
+
+    public enum Turnos {
         MANIANA, TARDE, NOCHE
-    }
+
 }

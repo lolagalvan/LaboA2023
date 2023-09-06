@@ -1,7 +1,7 @@
 package Curling;
 
-import Curling.Equipo;
 import Curling.Partidos;
+import Personas.Equipo;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
-package ABMMascotas;
+package ABMmascotas;
 
-import ABMMascotas.Duenio;
+import ABMmascotas.Duenio;
 
 public abstract class Mascota {
     private String nombreMascota;

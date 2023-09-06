@@ -1,6 +1,6 @@
-package Cosas
+package Cosas;
 
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 import java.util.Scanner;
 import Personas.Persona;
 
@@ -67,4 +67,4 @@ public class Arraylist {
         }
     }
 
-}
+}*/

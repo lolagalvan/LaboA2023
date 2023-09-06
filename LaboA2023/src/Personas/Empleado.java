@@ -18,6 +18,10 @@ public class Empleado extends Persona {
         this.registro=registro;
     }
 
+    public Empleado(String nombre) {
+        super(nombre);
+    }
+
     public HashSet<DiasHabiles> getDiasHabiles() {
         return diasHabiles;
     }

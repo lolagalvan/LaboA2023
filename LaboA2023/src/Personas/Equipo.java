@@ -1,5 +1,7 @@
+package Personas;
+
 import Personas.Jugador;
-import Tiempo.Turnos;
+import Enums.Turnos;
 
 import java.util.ArrayList;
 

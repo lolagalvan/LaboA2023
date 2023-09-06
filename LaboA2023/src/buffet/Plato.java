@@ -12,6 +12,9 @@ public class Plato {
         this.cantCalorias= cantCalorias;
     }
 
+    public Plato(String nombre, int precio) {
+    }
+
     public String getNombre() {
         return nombre;
     }

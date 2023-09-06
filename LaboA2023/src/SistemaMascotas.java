@@ -1,8 +1,8 @@
-package ABMMascotas;
+package ABMmascotas;
 
-import ABMMascotas.Duenio;
-import ABMMascotas.Mascota;
-import ABMMascotas.Peces;
+import ABMmascotas.Duenio;
+import ABMmascotas.Mascota;
+import ABMmascotas.Peces;
 
 import java.util.HashSet;
 

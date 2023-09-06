@@ -1,6 +1,6 @@
-package ABMMascotas;
+package ABMmascotas;
 
-import ABMMascotas.Mascota;
+import ABMmascotas.Mascota;
 
 public class Pajarito extends Mascota {
     private boolean cantor;

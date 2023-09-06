@@ -1,8 +1,9 @@
 package Curling;
 
+import Personas.Equipo;
 import Personas.Jugador;
 import Tiempo.Semana;
-import Tiempo.Turnos;
+import Enums.Turnos;
 
 import java.util.ArrayList;
 

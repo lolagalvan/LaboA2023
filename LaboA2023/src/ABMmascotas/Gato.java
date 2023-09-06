@@ -1,4 +1,4 @@
-package ABMMascotas;
+package ABMmascotas;
 
 public class Gato extends Mascota {
 

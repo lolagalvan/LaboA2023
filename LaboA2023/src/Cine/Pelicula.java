@@ -1,4 +1,4 @@
-import java.time.LocalTime;
+package Cine;
 
 public class Pelicula {
     private static int conatorPeli=0;
