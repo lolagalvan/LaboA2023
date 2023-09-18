@@ -1,3 +1,5 @@
+package Exepctions;
+
 public class ExepcionesThrow {
     public static void main(String[] args) {
 

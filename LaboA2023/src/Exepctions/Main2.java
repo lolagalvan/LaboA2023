@@ -1,3 +1,5 @@
+package Exepctions;
+
 public class Main2 {
 
     public static void main(String[] args){
@@ -11,11 +13,11 @@ public class Main2 {
         /*String nombre = null;
         try {
             if (nombre==null){
-                throw new ExepcionPersonalizada("nombre null");
+                throw new Exepctions.ExepcionPersonalizada("nombre null");
             }
             System.out.println("El largo del nombre es:"+ nombre.length());
         }
-        catch (ExepcionPersonalizada e){
+        catch (Exepctions.ExepcionPersonalizada e){
             System.out.println(e.getMessage() + " firma: Galvan - Mlikota");
         }
     }*/

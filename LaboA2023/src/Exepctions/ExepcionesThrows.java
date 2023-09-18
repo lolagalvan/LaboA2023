@@ -1,3 +1,5 @@
+package Exepctions;
+
 public class ExepcionesThrows{
     public static void main(String[] args) throws NullPointerException {
         try {
