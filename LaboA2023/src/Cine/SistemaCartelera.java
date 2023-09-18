@@ -83,10 +83,10 @@ public class SistemaCartelera {
         HashSet<Cine.Espectador> usuarios = new HashSet<>();
         HashSet<Cine.Funcion> funcionesDisponibles = new HashSet<>();
 
-        Cine.Pelicula p1= new Cine.Pelicula("Frozen",120,Cine.Genero.COMEDIA);
-        Cine.Pelicula p2= new Cine.Pelicula("Barbie",180,Cine.Genero.DRAMA);
-        Cine.Pelicula p3= new Cine.Pelicula("Spiderman",135,Cine.Genero.ACCION);
-        Cine.Pelicula p4= new Cine.Pelicula("Una Romantica",105,Cine.Genero.ROMANCE);
+        Cine.Pelicula p1= new Cine.Pelicula("Frozen",120,Cine.Biblioteca.Genero.COMEDIA);
+        Cine.Pelicula p2= new Cine.Pelicula("Barbie",180,Cine.Biblioteca.Genero.DRAMA);
+        Cine.Pelicula p3= new Cine.Pelicula("Spiderman",135,Cine.Biblioteca.Genero.ACCION);
+        Cine.Pelicula p4= new Cine.Pelicula("Una Romantica",105,Cine.Biblioteca.Genero.ROMANCE);
 
         Cine.Sala s1 = new Cine.Sala(10);
         Cine.Sala s2 = new Cine.Sala(11);
