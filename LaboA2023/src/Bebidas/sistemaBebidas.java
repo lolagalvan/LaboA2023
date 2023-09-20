@@ -1,51 +1,103 @@
 package Bebidas;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 public class sistemaBebidas {
-    HashSet<Lola>bebedores;
-    HashSet<Bebida> bebidas;
+    private HashMap<Integer, Lola>bebedores;
+    private HashMap<Bebida, Integer> Bebidas;
 
-    public sistemaBebidas(HashSet<Lola> bebedores, HashSet<Bebida> bebidas) {
+    public sistemaBebidas(HashMap<Integer, Lola> bebedores, HashMap<Bebida, Integer> bebidas) {
         this.bebedores = bebedores;
-        this.bebidas = bebidas;
+        Bebidas = bebidas;
     }
 
-    public HashSet<Lola> getBebedores() {
+    public HashMap<Integer, Lola> getBebedores() {
         return bebedores;
     }
 
-    public void setBebedores(HashSet<Lola> bebedores) {
+    public void setBebedores(HashMap<Integer, Lola> bebedores) {
         this.bebedores = bebedores;
     }
 
-    public HashSet<Bebida> getBebidas() {
-        return bebidas;
+    public HashMap<Bebida, Integer> getBebidas() {
+        return Bebidas;
     }
 
-    public void setBebidas(HashSet<Bebida> bebidas) {
-        this.bebidas = bebidas;
+    public void setBebidas(HashMap<Bebida, Integer> bebidas) {
+        Bebidas = bebidas;
     }
 
-    public void mejorHidrtacion(){
-        int mejor = 0;
-        String nombre = " ";
-        for (Lola bebedor: bebedores) {
-            if ( mejor < bebedor.coeficienteHidratacion()){
-                mejor = bebedor.coeficienteHidratacion();
-                nombre = bebedor.getNombre();
+    public void coeficienteXpersona(){
+        boolean vuelta=false;
+        int cMayor=0;
+        int cMenor=0;
+        Lola Mayor=null;
+        Lola Menor=null;
+        try {
+            if (bebedores.size()==0){
+                throw new noHayUsuarios("No existen usuarios en el sistema");
+            }
+            for (Map.Entry<Integer, Lola> usuario : bebedores.entrySet()) {
+                int coefAux = usuario.getValue().coeficienteHidratacion();
+                if (!vuelta) {
+                    cMayor = coefAux;
+                    Mayor = usuario.getValue();
+                    cMenor = coefAux;
+                    Menor = usuario.getValue();
+                    vuelta = true;
+                }
+                if (cMayor < coefAux) {
+                    cMayor = coefAux;
+                    Mayor = usuario.getValue();
+                }
+                if (cMenor > coefAux) {
+                    cMenor = coefAux;
+                    Menor = usuario.getValue();
+                }
+            }
+            System.out.println(Mayor.getNombre() +);
+            System.out.println(Menor.getNombre() );
+        } catch (noHayUsuarios e) {
+            System.out.println(e);
+        }
+
+    }
+    public void agregarUsuario(String nombre, int dni) {
+        try {
+            if (bebedores.containsKey(dni)) {
+                throw new dniYaExiste("El dni ingresado ya existe en el sistema");
+            } else {
+                Lola u1 = new Lola(nombre);
+
+            }
+        } catch (dniYaExiste e) {
+            System.out.println(e);
+        }
+    }
+
+
+    public void tomarBebida(int dni, Bebida bebida, int cantidad){
+        if (Bebidas.containsKey(bebida)) {
+            try {
+                if (Bebidas.get(bebida) >= cantidad) {
+                    bebedores.get(dni).tomarBebida(bebida, cantidad);
+                    Bebidas.put(bebida, Bebidas.get(bebida) - cantidad);
+                } else {
+                    throw new cantidadNoDisponible("No hay stock");
+                }
+            } catch (cantidadNoDisponible e) {
+                System.out.println(e);
             }
         }
-        System.out.println("la persona con mejor hidtracion es:"+ " "+ nombre);
-    }
-
-    public void peorHidracion(){
-        int peor = 0;
-        String nombre = " ";
-        for (Lola bebedor: bebedores){
-
+        else {
+            System.out.println("La bebida no existe");
         }
     }
+
+
+
 }
 
 

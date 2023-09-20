@@ -41,6 +41,7 @@ public abstract class Persona {
         return direccion;
     }
 
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
