@@ -57,7 +57,7 @@ public class sistemaBebidas {
                     Menor = usuario.getValue();
                 }
             }
-            System.out.println(Mayor.getNombre() +);
+            System.out.println(Mayor.getNombre() );
             System.out.println(Menor.getNombre() );
         } catch (noHayUsuarios e) {
             System.out.println(e);

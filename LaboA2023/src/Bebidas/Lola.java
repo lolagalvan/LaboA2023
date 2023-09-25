@@ -6,7 +6,7 @@ import Tiempo.Fecha;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Lola extends Persona {
+public class  Lola extends Persona {
 HashMap<Bebida,Integer>consumo;
 private int dni;
 
