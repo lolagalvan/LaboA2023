@@ -59,6 +59,7 @@ public class Pantalon extends Prenda {
         boolean agregado = false;
         if(prestar() == true){
             System.out.println("El artículo ingresado puede ingresar al circuito de préstamos");
+            agregado = true;
         }else {
             System.out.println("El articulo ingresado no podrá ingresar a nuestro sistema");
         }
