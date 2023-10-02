@@ -2,7 +2,7 @@ package Escuelaprestigiosa;
 
 import java.time.LocalDate;
 
-public class Examen {
+public abstract class Examen implements Aprobados {
     private LocalDate fecha;
 
     public Examen(LocalDate fecha) {

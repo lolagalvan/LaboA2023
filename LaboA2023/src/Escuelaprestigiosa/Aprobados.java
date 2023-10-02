@@ -2,5 +2,5 @@ package Escuelaprestigiosa;
 
 public interface Aprobados {
 
-    int cantAprobados();
+    boolean aprobado();
 }

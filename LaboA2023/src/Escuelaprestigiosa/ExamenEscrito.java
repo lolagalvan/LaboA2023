@@ -2,16 +2,15 @@ package Escuelaprestigiosa;
 
 import java.time.LocalDate;
 
-public class ExamenEscrito extends  Examen implements Aprobados{
+public class ExamenEscrito extends  Examen {
 
     private int calificacion;
 
-    private int minutos;
+    private static int minutos = 90;
 
-    public ExamenEscrito(LocalDate fecha,int calificacion, int minutos){
+    public ExamenEscrito(LocalDate fecha,int calificacion){
         super(fecha);
     this.calificacion=calificacion;
-    this.minutos=minutos;
 }
     public int getCalificacion() {
         return calificacion;
@@ -30,7 +29,7 @@ public class ExamenEscrito extends  Examen implements Aprobados{
     }
 
     @Override
-    public int cantAprobados() {
-        return 0;
+    public boolean cantAprobados() {
+    return calificacion >=6;
     }
 }

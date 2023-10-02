@@ -2,7 +2,7 @@ package Escuelaprestigiosa;
 
 import java.time.LocalDate;
 
-public class ExamenOral extends Examen implements  Aprobados{
+public class ExamenOral extends Examen  {
     private NivelSatisfaccion nivel;
 
     public ExamenOral(LocalDate fecha, NivelSatisfaccion nivel) {
@@ -19,7 +19,7 @@ public class ExamenOral extends Examen implements  Aprobados{
     }
 
     @Override
-    public int cantAprobados() {
-        return 0;
+    public boolean cantAprobados() {
+        return !(nivel.equals(NivelSatisfaccion.INSUFICIENTE));
     }
 }
