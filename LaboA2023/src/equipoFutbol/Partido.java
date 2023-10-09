@@ -67,4 +67,6 @@ public class Partido {
     public void setAsistenciaXjugador(HashMap<Jugador, Integer> asistenciaXjugador) {
         this.asistenciaXjugador = asistenciaXjugador;
     }
+
+
 }
