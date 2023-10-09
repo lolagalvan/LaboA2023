@@ -6,16 +6,18 @@ import java.util.HashMap;
 public class Partido {
     private Equipo2 equipo1;
     private Equipo2 equipo2;
-    private HashMap<Jugador, ArrayList<Integer>>estadisticas;
-    private int golesEquipo1;
-    private int golesEquipo2;
+    private int golesAtajadosEquipo1;
+    private int golesAtajadosEquipo2;
+    private HashMap<Jugador,Integer>golesXjugador;
+    private HashMap<Jugador,Integer>asistenciaXjugador;
 
-    public Partido(Equipo2 equipo1, Equipo2 equipo2, HashMap<Jugador, ArrayList<Integer>> estadisticas, int golesEquipo1, int golesEquipo2) {
+    public Partido(Equipo2 equipo1, Equipo2 equipo2, int golesAtajadosEquipo1, int golesAtajadosEquipo2, HashMap<Jugador, Integer> golesXjugador, HashMap<Jugador, Integer> asistenciaXjugador) {
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
-        this.estadisticas = estadisticas;
-        this.golesEquipo1 = golesEquipo1;
-        this.golesEquipo2 = golesEquipo2;
+        this.golesAtajadosEquipo1 = golesAtajadosEquipo1;
+        this.golesAtajadosEquipo2 = golesAtajadosEquipo2;
+        this.golesXjugador = golesXjugador;
+        this.asistenciaXjugador = asistenciaXjugador;
     }
 
     public Equipo2 getEquipo1() {
@@ -34,27 +36,35 @@ public class Partido {
         this.equipo2 = equipo2;
     }
 
-    public HashMap<Jugador, ArrayList<Integer>> getEstadisticas() {
-        return estadisticas;
+    public int getGolesAtajadosEquipo1() {
+        return golesAtajadosEquipo1;
     }
 
-    public void setEstadisticas(HashMap<Jugador, ArrayList<Integer>> estadisticas) {
-        this.estadisticas = estadisticas;
+    public void setGolesAtajadosEquipo1(int golesAtajadosEquipo1) {
+        this.golesAtajadosEquipo1 = golesAtajadosEquipo1;
     }
 
-    public int getGolesEquipo1() {
-        return golesEquipo1;
+    public int getGolesAtajadosEquipo2() {
+        return golesAtajadosEquipo2;
     }
 
-    public void setGolesEquipo1(int golesEquipo1) {
-        this.golesEquipo1 = golesEquipo1;
+    public void setGolesAtajadosEquipo2(int golesAtajadosEquipo2) {
+        this.golesAtajadosEquipo2 = golesAtajadosEquipo2;
     }
 
-    public int getGolesEquipo2() {
-        return golesEquipo2;
+    public HashMap<Jugador, Integer> getGolesXjugador() {
+        return golesXjugador;
     }
 
-    public void setGolesEquipo2(int golesEquipo2) {
-        this.golesEquipo2 = golesEquipo2;
+    public void setGolesXjugador(HashMap<Jugador, Integer> golesXjugador) {
+        this.golesXjugador = golesXjugador;
+    }
+
+    public HashMap<Jugador, Integer> getAsistenciaXjugador() {
+        return asistenciaXjugador;
+    }
+
+    public void setAsistenciaXjugador(HashMap<Jugador, Integer> asistenciaXjugador) {
+        this.asistenciaXjugador = asistenciaXjugador;
     }
 }

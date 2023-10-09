@@ -5,7 +5,7 @@ import Tiempo.Fecha;
 
 import java.util.HashSet;
 
-public class Arquero extends Jugador implements Estadisticas{
+public class Arquero extends Jugador {
     private double atajadas;
     private int golesRecibidos;
 
