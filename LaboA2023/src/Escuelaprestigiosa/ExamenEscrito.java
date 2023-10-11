@@ -1,8 +1,7 @@
-package Escuelaprestigiosa;
 
 import java.time.LocalDate;
 
-public class ExamenEscrito extends  Examen {
+/*public class ExamenEscrito extends  Examen {
 
     private int calificacion;
 
@@ -31,5 +30,4 @@ public class ExamenEscrito extends  Examen {
     @Override
     public boolean cantAprobados() {
     return calificacion >=6;
-    }
-}
+    */

@@ -1,4 +1,4 @@
-package Escuelaprestigiosa;
+/*package Escuelaprestigiosa;
 
 import java.util.HashSet;
 
@@ -36,3 +36,4 @@ public class SistemaColegio {
 
 
 }
+*/

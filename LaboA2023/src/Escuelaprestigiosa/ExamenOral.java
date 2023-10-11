@@ -1,4 +1,4 @@
-package Escuelaprestigiosa;
+/*package Escuelaprestigiosa;
 
 import java.time.LocalDate;
 
@@ -23,3 +23,5 @@ public class ExamenOral extends Examen  {
         return !(nivel.equals(NivelSatisfaccion.INSUFICIENTE));
     }
 }
+
+ */

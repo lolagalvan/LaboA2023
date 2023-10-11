@@ -22,7 +22,7 @@ public class Alumno extends Persona {
         this.examenesRealizados = examenesRealizados;
     }
 
-    public boolean aprobado(){
+   /*public boolean aprobado(){
         boolean aprobado = true;
         for (Examen examen:examenesRealizados) {
             if (!examen.cantAprobados()){
@@ -30,5 +30,5 @@ public class Alumno extends Persona {
             }
         }
         return aprobado;
-    }
+    }*/
 }

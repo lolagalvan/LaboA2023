@@ -39,13 +39,13 @@ public class Restaurante implements IncluirPlato, Contratar  {
 
     public void verificarMenu(Plato plato)throws PlatoYaestaEnMenu{
         if (menu.contains(plato)){
-            throw new PlatoYaestaEnMenu("el plato ya esta en el menu");
+            throw new PlatoYaestaEnMenu("El plato: "+plato.getNombre()+","+" ya esta en el menu");
         }
     }
 
     public void verificarChef(Plato plato)throws NoEstaElChef{
         if (!chefs.contains(plato.getCocineroPlato())){
-            throw new NoEstaElChef("el chef de este plato no esta en el restaurante");
+            throw new NoEstaElChef("El chef de el plato: "+plato.getNombre()+","+" no esta en el restaurante");
         }
     }
     @Override
@@ -53,12 +53,12 @@ public class Restaurante implements IncluirPlato, Contratar  {
         try {
             verificarChef(plato);
             verificarMenu(plato);
-            System.out.println("El plato: "+plato.getNombre()+"se agrego al menu de: "+getNombre());
+            System.out.println("El plato: "+plato.getNombre()+","+" se agrego al menu de: "+getNombre());
             menu.add(plato);
         } catch (NoEstaElChef e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());;
         } catch (PlatoYaestaEnMenu e) {
-            throw new RuntimeException(e);
+            System.out.println(e.getMessage());;
         }
     }
 
@@ -67,12 +67,13 @@ public class Restaurante implements IncluirPlato, Contratar  {
             try {
                 chef.verificarExperiencia();
                 chef.verificarEdad();
-                System.out.println("el chef:"+chef.getNombre()+"se unio al restaurante"+nombre);
+                System.out.println("El chef: "+chef.getNombre()+","+" se unio al restaurante: "+nombre);
                 chefs.add(chef);
+                chef.setRestauranteActual(this);
             } catch (ExperienciaInsuficiente e) {
-                e.getMessage();
+                System.out.println(e.getMessage());;
             } catch (EdadNoCorrespondiente e) {
-                e.getMessage();
+                System.out.println(e.getMessage());
             }
         }
     }
