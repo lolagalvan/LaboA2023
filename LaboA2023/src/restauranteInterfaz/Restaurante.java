@@ -69,7 +69,7 @@ public class Restaurante implements IncluirPlato, Contratar  {
                 chef.verificarEdad();
                 System.out.println("El chef: "+chef.getNombre()+","+" se unio al restaurante: "+nombre);
                 chefs.add(chef);
-                chef.setRestauranteActual(this);
+                chef.setRestauranteActual(this);//actualizo el restaurante actual del chef a este
             } catch (ExperienciaInsuficiente e) {
                 System.out.println(e.getMessage());;
             } catch (EdadNoCorrespondiente e) {
